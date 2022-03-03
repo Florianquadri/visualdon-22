@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/script.js" async></script>
 
-    <title>1-SVG</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/script.js" async></script>
 
-    <h1>Dessiner des formes</h1>
-    <h2>Rectangle</h2>
+  <title>1-SVG</title>
+</head>
 
-    <h2>Donut</h2>
+<body>
+
+  <h1>Dessiner des formes</h1>
+  <h2>Rectangle</h2>
+
+  <SVG width="400" height="100">
+    <rect x="0" y="0" width="400" height="100" fill="steelblue" id="rect"></rect>
+  </SVG>
+
+  <h2>Donut</h2>
+
+  <SVG id="svgDonut" width="400" height="200">
+    <g transform="translate(40,40)">
+      <circle id="cercleExtDonut" cx="50" cy="50" r="60" fill="none" stroke="black" stroke-width="1"></circle>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="black" stroke-width="1"></circle>
+    </g>
+  </SVG>
+
+  <h2>Ligne</h2>
+
+  <SVG width="400" height="400">
+    <line x1="50" y1="150" x2="30" y2="50" stroke="black" stroke-width="2"></line>
+  </SVG>
+
+  <h2>Path</h2>
+
+  <SVG width="1000" height="500">
+    <g stroke="black" stroke-width="2" fill="none">
+      <path d="M 30 150 V 80 H 90 H 30 V 50 H 90" id="theMotionPath"></path>
+      <path d="M 120 50 V 150 H 200"></path>
+      <!--       <path d="M 250 150 C 300 125 300 75 250 50"></path>
+      <path d="M 250 150 C 200 125 200 75 250 50"></path>
+      <path d="M 250 150 C 300 150 300 50 200 50 200 150 250 150"></path> -->
+      <ellipse cx="250" cy="100" rx="40" ry="60" />
+      <path d="M 250 150 L 250 50"></path>
+      <path d="M 310 150 V 50 C 370 70 370 90 310 110 L 370 150"></path>
+      <path d="M 390 150 V 50"></path>
+      <path d="M 400 150 L 425 100 H 475 H 425 L 450 50 L 500 150"></path>
+      <path d="M 510 150 V 50 L 560 150 V 50"></path>
+
+      <circle  r="7" fill="red">
+        <animateMotion dur="5s" repeatCount="indefinite">
+          <mpath xlink:href="#theMotionPath" />
+        </animateMotion>
+      </circle>
+
+    </g>
+  </SVG>
+
+  <h1>Animer des formes</h1>
+
+  <h2>On click</h2>
+
+  <h2>On hover</h2>
+
+  <h2>Prenez la première lettre de votre prénom que vous avez créée ci-dessus. Faite bouger une forme de votre choix le
+    long de la lettre</h2>
 
 
-    <h2>Ligne</h2>
+</body>
 
-
-    <h2>Path</h2>
-
-
-    <h1>Animer des formes</h1>
-
-    <h2>On click</h2>
-
-    <h2>On hover</h2>
-
-    <h2>Prenez la première lettre de votre prénom que vous avez créée ci-dessus. Faite bouger une forme de votre choix le long de la lettre</h2>
-
-
-  </body>
 </html>
