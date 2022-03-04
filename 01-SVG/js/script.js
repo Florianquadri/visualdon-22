@@ -66,7 +66,7 @@ svgDonut.addEventListener("mouseout", evt => {
     target.setAttribute("r", rayonExt);
 })
 
-//contour lettre
+
 
 
 
