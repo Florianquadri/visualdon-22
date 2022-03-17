@@ -147,7 +147,7 @@ monCercle3.on('click', function () {
 const dataExo = [{ h: 20, w: 20 }, { h: 5, w: 20 }, { h: 25, w: 20 }, { h: 8, w: 20 }, { h: 15, w: 20 }];
 
 
-// nouvelle sestion rectangle
+// nouvelle section rectangle
 
 let sectionRectange = d3.select("#exRect");
 let svgRect = sectionRectange.append('svg')
